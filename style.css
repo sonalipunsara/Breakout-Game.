@@ -1,0 +1,22 @@
+#gameCanvas {
+  border: 3px solid black;
+  background-color:rgb(189, 189, 239);
+  margin-top: 20px;
+  position: absolute;
+  top: 20%;
+  right: 25%;
+}
+
+#Title {
+  color: white;
+  text-align: center;
+}
+
+#scoreDisplay {
+  color: white;
+  text-align: center;
+}
+
+body {
+  background-color:rgb(1, 2, 48);
+}

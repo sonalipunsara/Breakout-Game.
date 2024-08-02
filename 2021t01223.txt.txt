@@ -1,0 +1,57 @@
+The provided code is an implementation of the breakout game using HTML, CSS, and JavaScript. 
+
+The objective of the game is to destroy all the bricks on the screen by bouncing the ball off 
+the paddle and hitting the bricks.
+
+HTML Structure:
+
+The HTML file contains a canvas element with an id "gameCanvas" for rendering the game graphics.
+It also includes a heading element with id "Title" and a paragraph element with id "scoreDisplay" 
+for displaying the game title and score.
+
+CSS Styling:
+
+The CSS file ("style.css") is linked to the HTML file to provide styling to the game elements.
+The game canvas is given a border, background color, and positioned on the page.
+The title and score display elements are styled with text alignment and color.
+
+Game Variables:
+
+The JavaScript code starts by declaring variables to store various game-related information such as canvas, 
+context, ball properties, paddle properties, brick properties, score, level, lives, etc.
+These variables are initialized with appropriate values.
+
+Event Listeners:
+
+Event listeners are added to the document to track the keyboard input for paddle movement.
+When a key is pressed down or released, the corresponding flag variables (rightPressed and leftPressed) are 
+set accordingly.
+
+Functions:
+
+The code defines several functions to handle different aspects of the game.
+
+1.createBricks() function is responsible for creating the bricks for the current level by populating the bricks array.
+2.keyDownHandler() and keyUpHandler() functions handle the keyboard input for paddle movement.
+3.collisionDetection() function checks for collisions between the ball and bricks.
+4.Drawing functions (drawBall(), drawPaddle(), drawBricks(), drawScore(), drawLevel(), drawLives()) are used to 
+  draw different elements of the game on the canvas.
+5.draw() function is the main game loop that clears the canvas, updates the game state, and redraws the game elements.
+6.resetBallAndPaddle() function resets the ball and paddle positions after losing a life or moving to the next level.
+7.saveScore() function saves the player's score as the highest score in the local storage if it's higher than the previously
+  saved score. 
+
+Game Initialization:
+
+1.The createBricks() function is called to initialize the bricks for the first level.
+2.The draw() function is called to start the game loop and render the game elements on the canvas.
+
+Displaying High Score:
+
+The code retrieves the highest score from the browser's local storage using localStorage.getItem().
+If a highest score exists, it is displayed on the page using the scoreDisplay element.
+
+Downloading score:
+
+After the game is over (all lives are lost), the player's score is saved as a text file using the saveScore() function.
+
